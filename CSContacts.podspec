@@ -93,7 +93,7 @@ advantage of RXSwift and RXCocoa.
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "CSContacts/**/*.{swift}"
+  s.source_files  = "CSContacts/*.{swift}"
 
 
 
@@ -140,14 +140,16 @@ advantage of RXSwift and RXCocoa.
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
-s.dependency 'RxSwift', '~> 4.0'
-s.dependency 'RxCocoa', '~> 4.0'
+  s.static_framework = true
 
-s.dependency 'RealmSwift', '~> 3.0'
+  s.dependency 'RxSwift', '~> 4.0'
+  s.dependency 'RxCocoa', '~> 4.0'
 
-s.dependency "RxContacts", '~> 1.0'
+  s.dependency 'RealmSwift', '~> 3.0'
 
-s.dependency "ReachabilitySwift", '~> 4.0'
-s.dependency "RxReachability", '~> 0.0'
+  s.dependency "RxContacts", '~> 1.0'
+
+  s.dependency "ReachabilitySwift", '~> 4.0'
+  s.dependency "RxReachability", '~> 0.0'
 
 end
