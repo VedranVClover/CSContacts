@@ -11,15 +11,15 @@ import Contacts
 
 public class PhoneContact {
     
-    let phoneNumbers:[String]?
-    let name:String?
-    let serverId:String?
-    let phoneIdentifier:String
-    var email:String?
+    public let phoneNumbers:[String]?
+    public let name:String?
+    public let serverId:String?
+    public let phoneIdentifier:String
+    public var email:String?
     
-    var isFavourite = false
+    public var isFavourite = false
     
-    init(phoneIdentifier: String, serverId: String, name: String, email: String?, phoneNumbers: [String]?) {
+    public init(phoneIdentifier: String, serverId: String, name: String, email: String?, phoneNumbers: [String]?) {
         self.phoneIdentifier = phoneIdentifier
         self.serverId = serverId
         self.name = name
@@ -27,7 +27,7 @@ public class PhoneContact {
         self.isFavourite = true
     }
     
-    convenience init?(fromUserData data: [String : Any], phoneId: String) {
+    public convenience init?(fromUserData data: [String : Any], phoneId: String) {
         guard let id = data["_id"] as? String,
             let phoneNumber = data["phoneNumber"] as? String,
             let name = data["name"] as? String else {
@@ -39,7 +39,7 @@ public class PhoneContact {
                   phoneNumbers: [phoneNumber])
     }
     
-    convenience init?(contact: CNContact, data: [String : Any]) {
+    public convenience init?(contact: CNContact, data: [String : Any]) {
         guard let serverId = data["_id"] as? String,
         let phoneNumber = data["phoneNumber"] as? String else {
             return nil

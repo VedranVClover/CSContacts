@@ -18,7 +18,7 @@ public class ContactsProvider {
     public var contacts: Observable<[PhoneContact]>!
     public var statusUpdate:PublishSubject<String> = PublishSubject()
     
-    static let instance = ContactsProvider()
+    public static let instance = ContactsProvider()
     
     // MARK: Private Variables
     let store = CNContactStore()
