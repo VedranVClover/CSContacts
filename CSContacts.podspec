@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CSContacts"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "CSContacts imports Phone Contacts found on server."
 
   # This description is used to generate tags and improve search results.
